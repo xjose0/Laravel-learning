@@ -11,6 +11,7 @@
         <li><strong>Categoría: </strong>{{$curso->imagem}}</li>
     </ul>
 
+    <a href="{{route('cursos.edit', $curso->id)}}">Editar curso</a>
     <a href="{{route('cursos.index')}}">Volver a cursos</a>
 
 @endsection
