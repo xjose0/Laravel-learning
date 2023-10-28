@@ -5,7 +5,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 </head>
 <body>
-    <div class="content">
+    <div class="content container mx-auto">
         @yield('content')
     </div>
 </body>

@@ -11,12 +11,10 @@
             @foreach ($cursos as $curso)
                 <li class="my-2">
                     <a href="{{ route('cursos.show', $curso->id) }}" class="text-blue-500 hover:underline">{{ $curso->nome }}</a>
-
-                    <!-- Formulario de eliminación -->
                     <form action="{{ route('cursos.destroy', $curso) }}" method="POST" style="display: inline;">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="text-red-500 hover:underline ml-2" onclick="return confirm('¿Estás seguro de que deseas eliminar este curso?')">❌</button>
+                        <button type="submit" class="text-red-500 hover:underline ml-2" onclick="return confirm('¿Estás seguro de que deseas eliminar este curso?')" title="Eliminar curso">❌</button>
                     </form>
                 </li>
             @endforeach
